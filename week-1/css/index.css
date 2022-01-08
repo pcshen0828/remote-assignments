@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav.nav{
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #EEEEEE;
+    padding: 0 60px 0 30px;
+}
+div.logo{
+    cursor: pointer;
+}
+div.navRightSide{
+    display: flex;
+}
+div.item{
+    /* border: 1px solid black; */
+    margin-left: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+div.hamburger{
+    /* border: 1px solid blue; */
+    display: none;
+    align-items: center;
+    cursor: pointer;
+} 
+div.hamburger img{
+    width: 36px;
+}
+@media screen and (max-width: 799.98px) {
+    div.hamburger{
+        display: flex;
+    } 
+    div.navRightSide{
+        display: none;
+    } 
+}
+
+div.welcomeMessage{
+    /* border: 1px solid blue; */
+    height: 210px;
+    background-color: #CBDDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+div.sectionTitle{
+    /* border: 1px solid red; */
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+div.contentBoxContainer{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+div.contentBox{
+    width: calc((100% - 40px) / 2);
+    height: 180px;
+    margin-bottom: 40px;
+    background-color: #8799A9;
+    /* border: 1px solid red; */
+    text-align: center;
+    padding-top: 20px;
+}
+@media screen and (max-width: 499.98px){
+    div.contentBox{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    div.sectionTitle{
+        height: 100px;
+    }
+}
+div.callToAction{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+button.cta{
+    background-color: #DDEDFF;
+    border: none;
+    cursor: pointer;
+    padding: 16px 10px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
