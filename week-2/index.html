@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Week-1</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="navLeftSide">
+            <div class="logo">
+                Website Title / Logo
+            </div>
+        </div>
+        <div class="navRightSide">
+            <div class="btnClose">X</div>
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+        </div>
+        <div class="hamburger">
+            <img src="./images/hamburger.png" alt="hamburger">
+        </div>
+    </nav>
+
+    <div class="welcomeMessage">
+        Welcome Message
+    </div>
+
+    <div class="sectionTitle">
+        Section Title
+    </div>
+
+    <div class="contentBoxContainer">
+        <div class="contentBox">Content Box 1</div>
+        <div class="contentBox">Content Box 2</div>
+        <div class="contentBox">Content Box 3</div>
+        <div class="contentBox">Content Box 4</div>
+    </div>
+
+    <div class="callToAction">
+        <button class="cta">Call To Action</button>
+    </div>
+
+    <div class="contentBoxContainer ctaToShow">
+        <div class="contentBox">Content Box 7</div>
+        <div class="contentBox">Content Box 8</div>
+        <div class="contentBox">Content Box 9</div>
+        <div class="contentBox">Content Box 10</div>
+    </div>
+
+    <script>
+        // welcome block change text
+        let welcome = document.getElementsByClassName('welcomeMessage')[0];
+        welcome.addEventListener('click', function(){
+            welcome.innerText = "Have a Good Time!";
+        })
+        // toggle burger menu
+        let hamburger = document.getElementsByClassName('hamburger')[0];
+        hamburger.addEventListener('click', function(){
+            let burgerMenu = document.getElementsByClassName('navRightSide')[0];
+            burgerMenu.classList.add('-on');
+            let btnClose = document.getElementsByClassName('btnClose')[0];
+            btnClose.addEventListener('click', function(){
+                burgerMenu.classList.remove('-on');
+            });
+        });
+        // cta load more content
+        let cta = document.getElementsByClassName('cta')[0];
+        cta.addEventListener('click', function(){
+            let ctaToShow = document.getElementsByClassName('ctaToShow')[0];
+            ctaToShow.classList.add('-on');
+        })
+
+
+    </script>
+    
+</body>
+</html>
