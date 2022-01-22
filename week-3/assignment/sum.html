@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+</head>
+<body>
+    <h2>Assignment 3: Connect to Backend API by AJAX</h2>
+    <!-- <form action="" method=""> -->
+        <label for="number">Enter a number:</label>
+        <input type="text" id="number" name="number">
+        <button type="submit" onclick="sendAJAX()">Get the result</button>
+        <p id="result"></p>
+    <!-- </form> -->
+
+    <script>
+        //  Write some JavaScript code in sum.html to make an HTTP request by AJAX to
+        // http://localhost:3000/getData?number=10, and get the result 55 from server.
+        function sendAJAX(){
+
+            let num = 0;
+            num = document.getElementById('number').value;
+
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState === 4){
+                    // alert('received');
+                    document.getElementById("result").innerHTML = `result: ${xhr.responseText}`;
+                }
+            };
+            xhr.open('GET', `http://localhost:3000/getData?number=${num}`);
+            xhr.send();
+        }
+
+
+    </script>
+</body>
+</html>
