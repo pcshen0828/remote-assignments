@@ -1,0 +1,13 @@
+doctype html 
+html(lang="en")
+    head 
+        title Welcome 
+    body 
+        if name && name != 'undefined'
+            h2 Welcome, #{name}!
+        else 
+            h2 Hello!
+            form(action="/trackName", method="get")
+                label Please enter your name: 
+                    input(type="text", name="name")
+                button(type="submit") Submit

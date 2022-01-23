@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 // Assignment 3: Connect to Backend API by AJAX
 app.use(express.static('../assignment'));
 
@@ -31,6 +33,18 @@ app.get('/getData', (req, res) => {
         res.send(`<h2>${add(req.query.number)}</h2>`); 
     }
 });
+
+// Assignment 4: HTTP Cookie (Advanced Optional)
+app.get('/myName', (req, res) => {
+    res.render('trackName', { name: req.cookies.name }); 
+});
+app.post('/myName',  (req, res) => {
+    res.render('trackName', { name: req.body.name }); 
+});
+app.get('/trackName', (req, res) => {
+    res.cookie('name', req.query.name);
+    res.redirect('/myName');
+})
 
 
 app.listen(3000, () => {

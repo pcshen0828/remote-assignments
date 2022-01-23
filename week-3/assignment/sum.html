@@ -19,7 +19,6 @@
         //  Write some JavaScript code in sum.html to make an HTTP request by AJAX to
         // http://localhost:3000/getData?number=10, and get the result 55 from server.
         function sendAJAX(){
-
             let num = 0;
             num = document.getElementById('number').value;
 
@@ -33,8 +32,6 @@
             xhr.open('GET', `http://localhost:3000/getData?number=${num}`);
             xhr.send();
         }
-
-
     </script>
 </body>
 </html>
