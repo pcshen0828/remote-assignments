@@ -45,6 +45,10 @@ app.get('/trackName', (req, res) => {
     res.cookie('name', req.query.name);
     res.redirect('/myName');
 })
+app.post('/goodbye', (req, res) => {
+    res.clearCookie('name');
+    res.redirect('/myName');
+})
 
 
 app.listen(3000, () => {
