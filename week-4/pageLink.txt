@@ -1,0 +1,8 @@
+Week-4 GitHub Repository Link:
+https://github.com/pcshen0828/remote-assignments/tree/master/week-4
+
+Assignment 1 & 2:
+https://pcshen0828.github.io/remote-assignments/week-4/assignment/assignment1&2/index.html
+
+Assignment 3: Re-Implement Layout by React
+https://pcshen0828.github.io/remote-assignments/week-4/assignment/assignment3/index.html
